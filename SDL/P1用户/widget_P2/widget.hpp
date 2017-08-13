@@ -1,46 +1,19 @@
 #include "widget.h"
-std::string Gwidget::process(const std::string &title,unsigned int schedule,time ttime){
-	auto len=title.size();
-//	ostringstream Gwidget_out;
-	if(startTime==0){
-		  startTime = SDL_GetTicks();
-		}
-	std::string temp;
-	unsigned int lastTime = 0, currentTime,startTime;
-//while (!quit) {
-  // do stuff
-  // ...
 
-  // Print a report once per second
-  currentTime = SDL_GetTicks();
-  if (currentTime > lastTime + 1000) {
-    //printf("Report: %d\n", variable);
-    startTime=startTime+currentTime-lastTime;
-    lastTime = currentTime;
-  }
-  if(startTime>ttime){
-  	//超时
-  	}
-//}
-unsigned int mai=0;
-for (int i=0,i!=-1 ,i++){
 	
-//	if(i==schedule){
-//		i++;//读取字符
-		while(title[i]!='#'){
-			temp+=title[i];
-			i++;
-			}
-			mai++;
-	//		if(mai!=schedule+1)
+		void Gwidget::process(const std::string &a,Uint32 b,Uint32 c){
+			Uint32 mai;
+				std::string temp;
+			for(int i=0;i<=100;i++){
+		//		if(ispunct(a[i])){mai++;
+				if(mai==b){temp="0";}
+				
+				else{
+			temp=temp+a[i];}
+				
+				
+				}
 			
-		//	number++1;
-		
-	if(mai==schedule+1;){i=-1;}else{title=NULL;};
-	}
-
+			
+			}
 	
-	
-	temp=temp+schedule+"//"+len+"."+startTime;
-	return temp;
-	}
