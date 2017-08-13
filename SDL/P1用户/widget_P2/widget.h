@@ -10,7 +10,8 @@
 typedef unsigned int time;
 class Gwidget{
 	public:
-std::string title;	//读条du.tiao....1每个阶段的名称mei.ge.jie.duan.de.ming.chen....2
+std::string title;
+//int number;	//读条du.tiao....1每个阶段的名称mei.ge.jie.duan.de.ming.chen....2
 	std::string process(std::string,unsigned int,time );
 	
 	private:
