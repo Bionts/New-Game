@@ -1,5 +1,5 @@
 #include "widget.h"
-std::string Gwidget::process(const std::string &title,unsigned int schedule,unsigned int ttime){
+std::string Gwidget::process(const std::string &title,unsigned int schedule,time ttime){
 	auto len=title.size();
 //	ostringstream Gwidget_out;
 	if(startTime==0){
@@ -22,21 +22,25 @@ std::string Gwidget::process(const std::string &title,unsigned int schedule,unsi
   	//超时
   	}
 //}
+unsigned int mai=0;
 for (int i=0,i!=-1 ,i++){
 	
-	if(i==schedule){
-		i++;//读取字符
+//	if(i==schedule){
+//		i++;//读取字符
 		while(title[i]!='#'){
 			temp+=title[i];
 			i++;
 			}
+			mai++;
+	//		if(mai!=schedule+1)
 			
-		}
-		i=-1;
+		//	number++1;
+		
+	if(mai==schedule+1;){i=-1;}else{title=NULL;};
 	}
 
 	
 	
-	temp=temp+schedule+"//"+len+startTime;
+	temp=temp+schedule+"//"+len+"."+startTime;
 	return temp;
 	}
