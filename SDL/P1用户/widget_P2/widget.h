@@ -5,16 +5,16 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_timer.h>
 #include <string>
-//#include <cstring>
+#include <stdlib.h>
+#include <cstring>
 
-typedef unsigned int time;
-class Gwidget{
-	public:
+//typedef unsigned int time;
+struct Gwidget{
 std::string title;
 //int number;	//读条du.tiao....1每个阶段的名称mei.ge.jie.duan.de.ming.chen....2
-	std::string process(std::string,unsigned int,time );
+	void process(char*[],int,int,int,Uint32);
 	
-	private:
-	time startTime=0;
-	}
+	
+//	unsigned int startTime=0;
+	};
 #endif
