@@ -12,7 +12,7 @@
 struct Gwidget{
 std::string title;
 //int number;	//读条du.tiao....1每个阶段的名称mei.ge.jie.duan.de.ming.chen....2
-	void process(char*[],int,int,int,Uint32);
+	std::string process(const std::string,int,int,Uint32);
 	
 	
 //	unsigned int startTime=0;
