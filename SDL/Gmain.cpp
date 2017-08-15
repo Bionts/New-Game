@@ -43,7 +43,9 @@ WMain=SDL_CreateWindow("MAIN:00-1",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFIN
 	
 	
 	
+	
 //QUIT
+SDL_Log("eer");
 	++QUIT_MAINI;
 if(QUIT_MAINI!=0)Destroy_SDL("ss");
 if(QUIT_MAINI==0)Destroy_SDL("extraordinary case");
@@ -53,7 +55,7 @@ if(QUIT_MAINI==0)Destroy_SDL("extraordinary case");
 	
 	//SDL_Quit func
 	void Destroy_SDL(const std::string StrDestroy){
-		if(StrDestroy);;
+		if(StrDestroy[0]==0);;
 		SDL_DestroyTexture(TLoading);
     SDL_DestroyRenderer(Render);
     SDL_DestroyWindow(WMain);
