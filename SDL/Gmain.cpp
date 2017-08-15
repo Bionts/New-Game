@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <string>
 #include <SDL2/SDL_log.h>
+#include <SDL2/SDL_time.h>
 #include <cmath>
 
 #include "P1用户/Joystick.h"
