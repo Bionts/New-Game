@@ -9,6 +9,9 @@
 #include <string>
 #include <SDL2/SDL_log.h>
 #include <cmath>
+
+#include "P1用户/Joystick.h"
+
 #define SCRN_Height 400
 #define SCRN_Width 800
 
@@ -57,7 +60,9 @@ if(QUIT_MAINI==0)Destroy_SDL("extraordinary case");
 	void Destroy_SDL(const std::string StrDestroy){
 		if(StrDestroy[0]==0);;
 		SDL_DestroyTexture(TLoading);
+
     SDL_DestroyRenderer(Render);
+
     SDL_DestroyWindow(WMain);
 		SDL_Quit();
 		}
