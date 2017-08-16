@@ -5,7 +5,7 @@
 {return (d==d);}
 template<class T>
 T poww(T a,T b);
-Joystick::Joystick(int vel,int Win_w,int Win_h)
+GJoystick::GJoystick(int vel,int Win_w,int Win_h)
 {
 	win_W=Win_w;
 	win_H=Win_h;
@@ -18,10 +18,10 @@ Joystick::Joystick(int vel,int Win_w,int Win_h)
 	V_y =0;
 	hasTouched =false;
 	}
-bool	Joystick::is_Touched(){
+bool	GJoystick::Gis_Touched(){
 return	hasTouched ;
 }
-void Joystick::set_Touch(){
+void GJoystick::Gset_Touch(){
 while (SDL_PollEvent(&e))
 {
 	switch (e.type)
@@ -50,7 +50,7 @@ while (SDL_PollEvent(&e))
 	}
 	}
 	}
-	void Joystick::set_Angle(){
+	void GJoystick::Gset_Angle(){
 	double x =L_x -E_x;
 		double y =L_y -E_y;
 	//	if (L_x==(win_W-50));
@@ -76,11 +76,11 @@ double cosx =x/sqrt((poww(x,y)));
 		}
 		
 		
-double Joystick::getVx(){
+double GJoystick::GgetVx(){
 	return V_x;
 }
 		
-double Joystick:: getVy(){
+double GJoystick::GgetVy(){
 	return V_y;
 }
 		
