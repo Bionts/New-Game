@@ -1,69 +1,35 @@
-#include <SDL2/SDL.h>
 #include <iostream>
-#include <SDL2/SDL_image.h>
-#include <vector>
-#include <fstream>
-#include <strstream>
-#include <ctime>
-#include <cstdlib>
-#include <string>
-#include <SDL2/SDL_log.h>
-#include <SDL2/SDL_time.h>
-#include <cmath>
+#include <SDL2/SDL.h>
+//#include "SDL_Gbutton.h"
 
-#include "P1用户/Joystick.h"
-
-#define SCRN_Height 400
-#define SCRN_Width 800
-
-//The key to take up
-SDL_Window* WMain;
-SDL_Renderer* Render;
-SDL_Surface* SLoading;
-SDL_Texture* TLoading;
-
-//function prototype
-void Destroy_SDL(std::string);
+void SDL_DestroyEnd(const char*);
 
 
-int main(int argc,char* argv[]){
-	
-	//Determine the numerical and Quit
-	int QUIT_MAINI=0;
-		
-	const std::string QUIT_MAINS="main()quit";
-	
-	//initialization
-	bool SDL_INIT_FRONT=SDL_Init(SDL_INIT_EVERYTHING);
-	if(!SDL_INIT_FRONT)SDL_Quit();
-WMain=SDL_CreateWindow("MAIN:00-1",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,SCRN_Width,SCRN_Height,SDL_WINDOW_FULLSCREEN|SDL_WINDOW_SHOWN);
-	if(WMain==NULL)return -2;
-	Render=SDL_CreateRenderer(WMain,-1,SDL_RENDERER_ACCELERATED);
-	if(Render==NULL)return -3;
-	
-	
-	
-	
-	
-	
-	
-	
-//QUIT
-SDL_Log("eer");
-	++QUIT_MAINI;
-if(QUIT_MAINI!=0)Destroy_SDL("ss");
-if(QUIT_MAINI==0)Destroy_SDL("extraordinary case");
+//define SDL_Window in U
+    SDL_Window* GWindow;
+    SDL_Surface* GWSurface;
+    SDL_Renderer* GWRender;
+//main() much use (...);
+int main(int argc,char* argv[])
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+  GWindow = SDL_CreateWindow("Hello,World",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,650,680,SDL_WINDOW_SHOWN);
+    std::cout << "Hello world!\n" << std::endl;
+    GWSurface=SDL_GetWindowSurface(GWindow);
+    SDL_Event EndEvent;
+    bool QuitSDL=false;
+    while(QuitSDL==false){
+    while (SDL_PollEvent(&EndEvent)){
+    if(EndEvent.type==SDL_QUIT){std::cout << "exit(0)!\n" << std::endl;
+    QuitSDL=true;}else if(EndEvent.type==SDL_MOUSEBUTTONDOWN)std::cout << "MOUSEbutton down!\n" << std::endl;else if(EndEvent.type==SDL_KEYDOWN)
+   std::cout << "KEYdown\n" << std::endl; };};
+    SDL_DestroyEnd("Hello,wrold\n");
+    return 0;
+}
+void SDL_DestroyEnd(const char* SDL_REEND){
+    std::cout<<"SDL_quit is ok,OUT:"<<SDL_REEND<<std::endl;
+    SDL_FreeSurface(GWSurface);
+    SDL_DestroyWindow(GWindow);
+    SDL_Quit();
 
-
-	return 0;}
-	
-	//SDL_Quit func
-	void Destroy_SDL(const std::string StrDestroy){
-		if(StrDestroy[0]==0);;
-		SDL_DestroyTexture(TLoading);
-
-    SDL_DestroyRenderer(Render);
-
-    SDL_DestroyWindow(WMain);
-		SDL_Quit();
-		}
+    };
