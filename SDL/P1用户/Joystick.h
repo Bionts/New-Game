@@ -1,7 +1,7 @@
 #ifndef JOYSTICK_H
 #define JOYSTICK_H
 #include <SDL2/SDL.h>
- class Joystick{
+ class GJoystick{
  private:
  int win_W;
  int win_H;
@@ -15,12 +15,12 @@
  double L_y;
  int vel;
 public:
-Joystick(int ,int,int );
-bool is_Touched();
-void set_Touch();//hasTouched set  true;
-void set_Angle(); //setAngle;
-void up_Touch();//hasTouched set false;
-double getVx();
-double getVy();
+GJoystick(int ,int,int );
+bool Gis_Touched();
+void Gset_Touch();//hasTouched set  true;
+void Gset_Angle(); //setAngle;
+void Gup_Touch();//hasTouched set false;
+double GgetVx();
+double GgetVy();
  };
  #endif
